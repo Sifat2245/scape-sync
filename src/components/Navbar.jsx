@@ -1,26 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/logo/logo.png";
-import { Menu, X } from "lucide-react"; // optional icons
+import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion"; //eslint-disable-line
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="py-5 ">
+    <motion.nav
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  ${
+        scrolled ? "bg-white shadow-md py-3" : "bg-transparent py-5"
+      }`}
+    >
       <div className="max-w-[1440px] mx-auto flex justify-between items-center px-4 xl:px-0">
-        {/* Logo */}
         <div>
-          <img src={logo} alt="ScapeSync Logo" className="h-[60px] w-[147px] md:h-[60px] md:w-[147px]" />
+          <img
+            src={logo}
+            alt="ScapeSync Logo"
+            className="h-[60px] w-[147px] md:h-[60px] md:w-[147px]"
+          />
         </div>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-4">
           <button className="bg-[#3BA334] text-white font-bold text-base leading-[26px] capitalize py-[10px] px-[26px] rounded-lg shadow-[0_6px_14px_rgba(59,163,52,0.4)] hover:shadow-[0_6px_20px_rgba(59,170,10,0.5)] hover:-translate-y-1 transition-all duration-300">
             Get Started
           </button>
         </div>
 
-        {/* Mobile Hamburger */}
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -31,15 +49,19 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden mt-4 px-4 flex flex-col items-center gap-4">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="md:hidden mt-4 px-4 flex flex-col items-center gap-4 pb-4"
+        >
           <button className="bg-[#3BA334] text-white font-bold text-base leading-[26px] capitalize py-[10px] px-[26px] rounded-lg shadow-[0_6px_14px_rgba(59,163,52,0.4)] hover:shadow-[0_6px_20px_rgba(59,170,10,0.5)] hover:-translate-y-1 transition-all duration-300 w-full text-center">
             Get Started
           </button>
-        </div>
+        </motion.div>
       )}
-    </nav>
+    </motion.nav>
   );
 };
 
