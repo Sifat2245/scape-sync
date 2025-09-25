@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import UseCase from '../components/UseCase';
+import Feedback from '../components/Feedback';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <Hero></Hero>
             <Features></Features>
             <UseCase></UseCase>
+            <Feedback></Feedback>
         </div>
     );
 };

@@ -73,7 +73,7 @@ const featureVariants = {
 
 const UseCase = () => {
   return (
-    <section className="pt-28 pb-20 px-4 sm:px-6 lg:px-0">
+    <section className="pt-28 px-4 sm:px-6 lg:px-0">
       <div className="max-w-[1440px] mx-auto">
         {/* Section Header */}
         <div className="relative">
@@ -175,7 +175,14 @@ const UseCase = () => {
                 />
                 <div className="top-10 right-[200px] w-[190px] h-[295px] absolute bg-[#3BA334]/50 rounded-full blur-[200px] transform -rotate-[55.51deg] -z-10 hidden xl:block" />
                 <div
-                  className="w-[700px] h-[140px] absolute bottom-0"
+                  className="w-[700px] h-[250px] absolute bottom-0"
+                  style={{
+                    background:
+                      "linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)",
+                  }}
+                />
+                <div
+                  className="w-[700px] h-[140px] absolute -bottom-32 rotate-180"
                   style={{
                     background:
                       "linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)",
