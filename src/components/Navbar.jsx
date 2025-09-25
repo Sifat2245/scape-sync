@@ -3,8 +3,8 @@ import logo from "../assets/logo/logo.png";
 
 const Navbar = () => {
   return (
-    <nav className="w-full py-5">
-      <div className="container mx-auto px-4 flex justify-between items-center">
+    <nav className=" py-5">
+      <div className="max-w-[1440px] mx-auto flex justify-between items-center">
         <div>
           <img src={logo} alt="ScapeSync Logo" className="h-[60px] w-[147px]" />
         </div>
