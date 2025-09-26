@@ -8,11 +8,11 @@ const ForgetPassword = () => {
   const [email, setEmail] = useState("");
   const { forgotPassword } = useAuth();
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true)
+    setLoading(true);
     try {
       await forgotPassword(email);
       localStorage.setItem("unverifiedEmail", email);
@@ -21,9 +21,8 @@ const ForgetPassword = () => {
       navigate("/auth/verify-otp");
     } catch {
       toast.error("Something went wrong");
-    }
-    finally{
-      setLoading(false)
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -66,11 +65,11 @@ const ForgetPassword = () => {
                   placeholder="Email address"
                 />
                 <label
-                htmlFor="email"
-                className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] "
-              >
-                Email Address
-              </label>
+                  htmlFor="email"
+                  className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] peer-[&:not(:placeholder-shown)]:top-1 peer-[&:not(:placeholder-shown)]:text-xs peer-[&:not(:placeholder-shown)]:text-gray-600 "
+                >
+                  Email Address
+                </label>
               </div>
               <div>
                 <button

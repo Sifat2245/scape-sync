@@ -69,6 +69,7 @@ const SignupPage = () => {
                   type="text"
                   required
                   value={form.first_name}
+                  placeholder=" "
                   onChange={(e) =>
                     setForm({ ...form, first_name: e.target.value })
                   }
@@ -76,7 +77,7 @@ const SignupPage = () => {
                 />
                 <label
                   htmlFor="first-name"
-                  className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] "
+                  className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] peer-[&:not(:placeholder-shown)]:top-1 peer-[&:not(:placeholder-shown)]:text-xs peer-[&:not(:placeholder-shown)]:text-gray-600 "
                 >
                   First Name
                 </label>
@@ -87,6 +88,7 @@ const SignupPage = () => {
                   name="last_name"
                   type="text"
                   required
+                  placeholder=" "
                   value={form.last_name}
                   onChange={(e) =>
                     setForm({ ...form, last_name: e.target.value })
@@ -96,7 +98,7 @@ const SignupPage = () => {
 
                 <label
                   htmlFor="last-name"
-                  className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] "
+                  className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] peer-[&:not(:placeholder-shown)]:top-1 peer-[&:not(:placeholder-shown)]:text-xs peer-[&:not(:placeholder-shown)]:text-gray-600 "
                 >
                   Last Name
                 </label>
@@ -110,13 +112,14 @@ const SignupPage = () => {
                 type="email"
                 autoComplete="email"
                 required
+                placeholder=" "
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="peer block w-full px-4 pt-5 pb-2 border border-gray-300 rounded-md shadow-sm placeholder-transparent focus:outline-none focus:ring-[#39A432] focus:border-[#39A432] sm:text-sm"
               />
               <label
                 htmlFor="email"
-                className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] "
+                className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] peer-[&:not(:placeholder-shown)]:top-1 peer-[&:not(:placeholder-shown)]:text-xs peer-[&:not(:placeholder-shown)]:text-gray-600 "
               >
                 Email Address
               </label>
@@ -128,6 +131,7 @@ const SignupPage = () => {
                 name="password"
                 type={passwordVisible ? "text" : "password"}
                 required
+                placeholder=" "
                 value={form.password}
                 onChange={(e) => setForm({ ...form, password: e.target.value })}
                 className="peer block w-full px-4 pt-5 pb-2 border border-gray-300 rounded-md shadow-sm placeholder-transparent focus:outline-none focus:ring-[#39A432] focus:border-[#39A432] sm:text-sm"
@@ -145,7 +149,7 @@ const SignupPage = () => {
               </button>
               <label
                 htmlFor="password"
-                className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] "
+                className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] peer-[&:not(:placeholder-shown)]:top-1 peer-[&:not(:placeholder-shown)]:text-xs peer-[&:not(:placeholder-shown)]:text-gray-600 "
               >
                 Password
               </label>
@@ -157,6 +161,7 @@ const SignupPage = () => {
                 name="password_confirmation"
                 type={confirmPasswordVisible ? "text" : "password"}
                 required
+                placeholder=" "
                 value={form.password_confirmation}
                 onChange={(e) =>
                   setForm({ ...form, password_confirmation: e.target.value })
@@ -179,7 +184,7 @@ const SignupPage = () => {
 
               <label
                 htmlFor="confirm-password"
-                className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] "
+                className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] peer-[&:not(:placeholder-shown)]:top-1 peer-[&:not(:placeholder-shown)]:text-xs peer-[&:not(:placeholder-shown)]:text-gray-600 "
               >
                 Confirm Password
               </label>

@@ -53,12 +53,12 @@ const LoginPage = () => {
                 required
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                placeholder="Email address"
-                className="peer block w-full px-4 pt-5 pb-2 border border-gray-300 rounded-md shadow-sm placeholder-transparent focus:outline-none focus:ring-[#39A432] focus:border-[#39A432] sm:text-sm"
+                placeholder=" "
+                className="peer block w-full px-4 pt-5 pb-2 border border-gray-300 rounded-md shadow-sm  focus:outline-none focus:ring-[#39A432] focus:border-[#39A432] sm:text-sm"
               />
               <label
                 htmlFor="email"
-                className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] "
+                className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] peer-[&:not(:placeholder-shown)]:top-1 peer-[&:not(:placeholder-shown)]:text-xs peer-[&:not(:placeholder-shown)]:text-gray-600 "
               >
                 Email address
               </label>
@@ -73,8 +73,8 @@ const LoginPage = () => {
                   onChange={(e) =>
                     setForm({ ...form, password: e.target.value })
                   }
-                  placeholder="Enter your password"
-                  className="peer block w-full px-4 pt-5 pb-2 border border-gray-300 rounded-md shadow-sm placeholder-transparent focus:outline-none focus:ring-[#39A432] focus:border-[#39A432] sm:text-sm"
+                  placeholder=" "
+                  className="peer block w-full px-4 pt-5 pb-2 border border-gray-300 rounded-md shadow-sm  focus:outline-none focus:ring-[#39A432] focus:border-[#39A432] sm:text-sm"
                 />
                 <button
                   type="button"
@@ -88,11 +88,11 @@ const LoginPage = () => {
                   )}
                 </button>
                 <label
-                htmlFor="password"
-                className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] "
-              >
-                Enter Your Password
-              </label>
+                  htmlFor="password"
+                  className="absolute left-4 top-4 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-xs peer-focus:text-[#39A432] peer-[&:not(:placeholder-shown)]:top-1 peer-[&:not(:placeholder-shown)]:text-xs peer-[&:not(:placeholder-shown)]:text-gray-600 "
+                >
+                  Enter Your Password
+                </label>
               </div>
               {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
             </div>
