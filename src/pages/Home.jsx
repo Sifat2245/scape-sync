@@ -5,6 +5,7 @@ import Features from '../components/Features';
 import UseCase from '../components/UseCase';
 import Feedback from '../components/Feedback';
 import FAQ from '../components/FAQ';
+import Footer from '@/components/Footer';
 
 const Home = () => {
     return (
@@ -21,6 +22,7 @@ const Home = () => {
             <UseCase></UseCase>
             <Feedback></Feedback>
             <FAQ></FAQ>
+            <Footer></Footer>
         </div>
     );
 };
