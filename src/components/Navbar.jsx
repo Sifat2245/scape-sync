@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../assets/logo/logo.png";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion"; //eslint-disable-line
+import { Link } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,9 +37,11 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-4">
-          <button className="bg-[#3BA334] text-white font-bold text-sm sm:text-base md:text-base leading-[26px] capitalize py-2 px-6 rounded-lg shadow-[0_6px_14px_rgba(59,163,52,0.4)] hover:shadow-[0_6px_20px_rgba(59,170,10,0.5)] hover:-translate-y-1 transition-all duration-300">
-            Get Started
-          </button>
+          <Link to={"/auth/login"}>
+            <button className="bg-[#3BA334] text-white font-bold text-sm sm:text-base md:text-base leading-[26px] capitalize py-2 px-6 rounded-lg shadow-[0_6px_14px_rgba(59,163,52,0.4)] hover:shadow-[0_6px_20px_rgba(59,170,10,0.5)] hover:-translate-y-1 transition-all duration-300">
+              Get Started
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -60,9 +63,11 @@ const Navbar = () => {
           transition={{ duration: 0.4 }}
           className="md:hidden mt-2 px-4 flex flex-col items-center gap-4 pb-4"
         >
-          <button className="bg-[#3BA334] text-white font-bold text-base leading-[26px] capitalize py-2 px-6 rounded-lg shadow-[0_6px_14px_rgba(59,163,52,0.4)] hover:shadow-[0_6px_20px_rgba(59,170,10,0.5)] hover:-translate-y-1 transition-all duration-300 w-full text-center">
-            Get Started
-          </button>
+          <Link to={'/auth/login'}>
+            <button className="bg-[#3BA334] text-white font-bold text-base leading-[26px] capitalize py-2 px-6 rounded-lg shadow-[0_6px_14px_rgba(59,163,52,0.4)] hover:shadow-[0_6px_20px_rgba(59,170,10,0.5)] hover:-translate-y-1 transition-all duration-300 w-full text-center">
+              Get Started
+            </button>
+          </Link>
         </motion.div>
       )}
     </motion.nav>
