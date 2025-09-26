@@ -16,13 +16,12 @@ const Home = () => {
             <div
                 className='top-96 right-[100px] w-[637px] h-[500px] absolute bg-[#3BA334]/20 rounded-full blur-[300px] transform rotate-[-55.51deg] hidden xl:block overflow-x-hidden'
             />
-            {/* <Navbar></Navbar> */}
+
             <Hero></Hero>
             <Features></Features>
             <UseCase></UseCase>
             <Feedback></Feedback>
             <FAQ></FAQ>
-            {/* <Footer></Footer> */}
         </div>
     );
 };

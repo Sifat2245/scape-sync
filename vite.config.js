@@ -11,4 +11,13 @@ export default defineConfig({
       "@": path.resolve("./src"),
     },
   },
+  //  server: {
+  //   proxy: {
+  //     "/api": {
+  //       target: "https://apitest.softvencefsd.xyz",
+  //       changeOrigin: true,
+  //       secure: false,
+  //     },
+  //   },
+  // },
 });
