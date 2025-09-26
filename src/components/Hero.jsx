@@ -54,7 +54,7 @@ const buttonVariants = {
 
 const Hero = () => {
   return (
-    <section className="w-full overflow-hidden h-[785px] mt-32">
+    <section className="w-full overflow-hidden 2xl:h-[785px] xl:h-[720px] lg:h-[680px] mt-32 px-4 lg:px-8">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-0 z-10">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-20">
           {/* Left Column: Text Content */}
@@ -73,7 +73,7 @@ const Hero = () => {
             <div className="relative">
               <motion.h1
                 variants={textVariants}
-                className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[84px] mt-8 md:mt-0 font-bold text-[#202922] tracking-tight leading-snug sm:leading-tight lg:leading-[1.1]"
+                className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[84px] mt-8 md:mt-14 xl:mt-0 font-bold text-[#202922] tracking-tight leading-snug sm:leading-tight lg:leading-[1.1]"
               >
                 All Your Jobs <br className="hidden sm:block" /> One Smart App
               </motion.h1>

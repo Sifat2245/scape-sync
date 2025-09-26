@@ -29,22 +29,22 @@ const Feedback = () => {
 
   return (
     <div className="pt-24 sm:py-32">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-0">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-0 relative">
         {/* Header Section */}
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             What Our Users Are Saying
           </h2>
           <p className="mt-6 text-md leading-8 text-gray-600">
-            Real stories from clients, employees, and business owners who use <br />
+            Real stories from clients, employees, and business owners who use{" "}
+            <br />
             our app every day.
           </p>
         </div>
-        
 
+        <div className="-top-72 right-5/12 w-[140px] h-[1370px] absolute bg-[#3BA334]/20 rounded-full blur-[200px] transform -rotate-90 -z-10 hidden xl:block" />
         {/* Testimonials Grid */}
-        <div className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 lg:grid-cols-3 relative">
-            <div className="-top-96 right-4/12 w-[162px] h-[1370px] absolute bg-[#3BA334]/20 rounded-full blur-[200px] transform -rotate-90 -z-10 hidden xl:block" />
+        <div className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
