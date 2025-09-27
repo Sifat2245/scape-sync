@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
-import api from "@/hooks/axios";
 import { toast } from "sonner";
+import { useAuth } from "@/providers/AuthProvider";
 
 const SignupPage = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
-  const { register } = api();
+  const { register } = useAuth();
   const navigate = useNavigate();
   const [form, setForm] = useState({
     first_name: "",
